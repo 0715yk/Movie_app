@@ -13,8 +13,8 @@ class Nav extends React.Component {
 
     async getSearchValue(e) {
         let value = e.target.value.trim();
+        await this.setState({ searchedValue: value });
         if (value.length >= 5) {
-            await this.setState({ searchedValue: value });
             this.props.searchMovie(this.state.searchedValue);
         }
     }
