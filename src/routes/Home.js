@@ -39,7 +39,7 @@ class Home extends React.Component {
                 <section className="container">
                     {isLoading ? (
                         <div className="loader" >
-                            <span className="loader__text">Loading...</span>
+                            <span className="loader__text">oading...</span>
                         </div>
                     ) : this.state.movies ?
                             (<div className="movies">
