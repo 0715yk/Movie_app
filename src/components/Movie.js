@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Movie.css';
 import { Link } from 'react-router-dom';
+
 function Movie(props) {
     let { year, title, summary, poster, genres } = props;
+    console.log(genres);
     return (
         <div className="movie">
             <Link to={

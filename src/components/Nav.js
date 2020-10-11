@@ -1,5 +1,7 @@
 import React from 'react';
 import './Nav.css'
+import { Link } from 'react-router-dom';
+
 class Nav extends React.Component {
 
     constructor(props) {
@@ -12,16 +14,18 @@ class Nav extends React.Component {
     }
 
     async getSearchValue(e) {
-        let value = e.target.value.trim();
-        await this.setState({ searchedValue: value });
-        if (value.length >= 4) {
-            this.props.searchMovie(this.state.searchedValue);
+        if (this.props.isMounted === true) {
+            let value = e.target.value.trim();
+            await this.setState({ searchedValue: value });
         }
+
     }
 
     sendSearchedValue() {
-        this.props.searchMovie(this.state.searchedValue);
-        this.search.value = null;
+        if (this.props.isMounted === true) {
+            this.props.searchMovie(this.state.searchedValue);
+            this.search.value = '';
+        }
     }
 
     render() {
@@ -29,7 +33,7 @@ class Nav extends React.Component {
             <div className="searchBar">
                 <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQHrn1VbmMMJBaPpsJbXdVPAB1gDKA6f4osoA&usqp=CAU" alt="main img" />
                 <input type="text" ref={(c) => this.search = c} onChange={this.getSearchValue} />
-                <button onClick={this.sendSearchedValue}>search</button>
+                <Link to={{ pathname: `/search`, state: { value: this.state.searchedValue } }}><button onClick={this.sendSearchedValue}>search</button></Link>
             </div>
         );
     }
