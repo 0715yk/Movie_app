@@ -1,0 +1,28 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    order: 0;
+    width: 7%;
+    height: 7%;
+    border-radius: 10px;
+}
+
+input {
+    order: 1;
+    margin-left: 5px;
+    height: 30px;
+
+}
+
+button {
+    order: 2;
+    margin-left: 3px;
+    height: 30px;
+    text-transform: uppercase;
+
+}
