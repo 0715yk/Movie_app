@@ -1,0 +1,79 @@
+.detail_frame {
+  position: absolute;
+  height: 100%;
+  width: 60vw;
+  background-color: white;
+  left: 20%;
+}
+
+.upperSide {
+  display: flex;
+  padding: 2rem;
+}
+.posterImg {
+  /* box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -9px rgba(0, 0, 0, 0.025); */
+}
+.informations {
+  display: flex;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid darkgrey;
+}
+
+#description_genres {
+  margin-top: 2rem;
+}
+
+.description {
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: grey;
+}
+
+.genres {
+  margin-top: 0.5rem;
+  margin-left: 2.1rem;
+}
+
+.genre {
+  margin-left: 0.4rem;
+}
+
+.year {
+  color: grey;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.rating {
+  margin-top: 0.5rem;
+  margin-left: 2.5rem;
+}
+
+.runtime {
+  margin-top: 0.5rem;
+  margin-left: 2.5rem;
+}
+
+#descriptions {
+  width: 85%;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+.summary {
+  width: 85%;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}

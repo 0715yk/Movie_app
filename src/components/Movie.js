@@ -4,15 +4,15 @@ import './Movie.css';
 import { Link } from 'react-router-dom';
 
 function Movie(props) {
-    let { year, title, summary, poster, genres } = props;
-    console.log(genres);
+    let { rating, runtime, movieId, year, title, summary, poster, genres } = props;
+
     return (
         <div className="movie">
             <Link to={
                 {
                     pathname: '/movie-detail',
                     state: {
-                        year, title, summary, poster, genres
+                        movieId, year, title, summary, poster, genres, rating, runtime
                     }
                 }
             }>
