@@ -1,3 +1,3 @@
-# movie_app 2020
+# YongFlix
 
-React JS Fundamentals Course 2020
+YongFlix move app with react JS
